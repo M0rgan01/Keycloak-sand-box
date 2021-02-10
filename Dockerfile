@@ -1,5 +1,7 @@
 FROM jboss/keycloak:12.0.1
 
+LABEL org.opencontainers.image.source=https://github.com/m0rgan01/keycloak-sand-box
+
 USER root
 
 COPY themes/todo /opt/jboss/keycloak/themes/todo
