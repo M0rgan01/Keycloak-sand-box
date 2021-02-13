@@ -1,1 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
+#particles-js {
+    background: radial-gradient(circle, rgba(71,162,254,1) 0%, rgba(0,61,142,1) 50%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.form-wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    box-shadow: 0 10px 13px -6px rgba(0,0,0,.2),0 21px 33px 3px rgba(0,0,0,.14),0 8px 40px 7px rgba(0,0,0,.12);
+    border-radius: 10px;
+    position: fixed;
+    overflow-y: auto;
+    background: white;
+    max-height: 100%;
+}
