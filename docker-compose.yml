@@ -33,7 +33,7 @@ services:
       KEYCLOAK_PASSWORD: admin
       KEYCLOAK_LOGLEVEL: INFO
       ROOT_LOGLEVEL: INFO
-      KEYCLOAK_IMPORT: opt/jboss/keycloak/imports/realm-export.json
+      KEYCLOAK_IMPORT: opt/jboss/keycloak/imports/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled
     labels:
       - traefik.enable=true
       - traefik.http.routers.keycloak.rule=Host(`localhost`)
