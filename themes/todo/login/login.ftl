@@ -59,6 +59,16 @@
                       <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
                       <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
                   </div>
+
+                <div id="kc-register-buttons">
+                    <p class="text-center font-weight-bold">Not already signed up ?</p>
+                    <a href="${url.registrationUrl}"
+                       class="${properties.kcButtonClass!} ${properties.kcButtonSuccessClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}">
+                        Register
+                        <i class="fas fa-plus-circle ml-2"></i>
+                    </a>
+                </div>
+
             </form>
         </#if>
         </div>
