@@ -950,7 +950,7 @@
         "saml.force.post.binding": "false",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
-        "login_theme": "todo",
+        "login_theme": "keycloak",
         "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
         "saml.server.signature.keyinfo.ext": "false",
@@ -1505,9 +1505,9 @@
     "user": "requirement.manager.tool@gmail.com"
   },
   "loginTheme": "todo",
-  "accountTheme": "todo",
-  "adminTheme": "todo",
-  "emailTheme": "todo",
+  "accountTheme": "keycloak.v2",
+  "adminTheme": "keycloak",
+  "emailTheme": "keycloak",
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"

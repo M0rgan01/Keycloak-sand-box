@@ -20,8 +20,8 @@ docker-compose stop
 ### Override themes
 
 ```bash
-docker exec rm_tool_keycloak rm -rf /opt/jboss/keycloak/themes/todo
-docker cp ./themes/rmtool rm_tool_keycloak:/opt/jboss/keycloak/themes/todo
+docker exec todo_keycloak rm -rf /opt/jboss/keycloak/themes/todo
+docker cp ./themes/todo todo_keycloak:/opt/jboss/keycloak/themes/todo
 ```
 
 ### Disable front caching
@@ -32,5 +32,5 @@ at container startup (see docker-compose for more information)
 or
 
 ```bash
-docker cp ./imports/standalone.xml rm_tool_keycloak:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+docker cp ./imports/standalone.xml todo_keycloak:/opt/jboss/keycloak/standalone/configuration/standalone.xml
 ```
