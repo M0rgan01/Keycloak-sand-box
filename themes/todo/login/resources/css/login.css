@@ -29,13 +29,14 @@ html, body {
 }
 
 .realmTitle {
-    text-align: center;
     font-weight: 900;
     font-size: 3em;
+    color: black;
 }
 
-.realmTitle .letter {
-    display: inline-block;
+.realmTitle:hover {
+    color: black;
+    text-decoration: none;
 }
 
 .input-group-text {

@@ -42,12 +42,17 @@
     <div id="particles-js"></div>
 
     <div class="form-wrapper">
-        <div class="form-content px-5 py-3">
+        <div class="form-content p-4">
 
-            <div class="realmTitle mx-2">
-                ${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}
+            <div class="text-center">
+                <a tabindex="6"
+                   class="realmTitle"
+                   href="${client.baseUrl}">
+                    ${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}
+                </a>
             </div>
 
+            <hr style="width: 90%">
 
             <#-- App-initiated actions should not see warning messages about the need to complete the action -->
             <#-- during login.                                                                               -->
