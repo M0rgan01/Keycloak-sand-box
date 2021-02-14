@@ -30,5 +30,33 @@ html, body {
 
 .realmTitle {
     text-align: center;
+    font-weight: 900;
     font-size: 3em;
+}
+
+.realmTitle .letter {
+    display: inline-block;
+}
+
+.input-group-text {
+    background-color: inherit !important;
+    border: none !important;
+}
+
+.input-group {
+    width: auto;
+}
+
+.input-group-prepend {
+    box-shadow: none !important;
+    border-radius: 5px 0px 0px 5px;
+    border-top: solid 1px #479df5;
+    border-left: solid 1px #479df5;
+    border-bottom: solid 1px #479df5;
+}
+
+.form-control {
+    border-color: #479df5 !important;
+    border-left: none !important;
+    box-shadow: none !important;
 }

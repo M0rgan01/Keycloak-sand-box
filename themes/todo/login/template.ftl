@@ -39,32 +39,31 @@
 
     <body class="${properties.kcBodyClass!}">
 
-
-    <#-- App-initiated actions should not see warning messages about the need to complete the action -->
-    <#-- during login.                                                                               -->
-    <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
-        <div class="alert-${message.type} ${properties.kcAlertClass!} pf-m-<#if message.type = 'error'>danger<#else>${message.type}</#if>">
-            <div class="pf-c-alert__icon">
-                <#if message.type = 'success'><span
-                    class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
-                <#if message.type = 'warning'><span
-                    class="${properties.kcFeedbackWarningIcon!}"></span></#if>
-                <#if message.type = 'error'><span
-                    class="${properties.kcFeedbackErrorIcon!}"></span></#if>
-                <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-            </div>
-            <span class="${properties.kcAlertTitleClass!}">${kcSanitize(message.summary)?no_esc}</span>
-        </div>
-    </#if>
-
     <div id="particles-js"></div>
 
     <div class="form-wrapper">
-        <div class="form-content p-3">
+        <div class="form-content px-5 py-3">
 
-            <div class="realmTitle">
+            <div class="realmTitle mx-2">
                 ${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}
             </div>
+
+
+            <#-- App-initiated actions should not see warning messages about the need to complete the action -->
+            <#-- during login.                                                                               -->
+            <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
+                <div class="custom-alert custom-alert-${message.type} mx-4 mt-4">
+                  <span class="custom-alert-icon">
+                    <#if message.type = 'success'><i class="fas fa-check-circle"></i></#if>
+                      <#if message.type = 'warning'><i class="fas fa-exclamation-circle"></i></#if>
+                      <#if message.type = 'error'><i class="fas fa-times-circle"></i></#if>
+                      <#if message.type = 'info'><i class="fas fa-exclamation-circle"></i></#if>
+                  </span>
+                  <span>
+                    ${kcSanitize(message.summary)?no_esc}
+                  </span>
+                </div>
+            </#if>
 
             <#nested "form">
         </div>
