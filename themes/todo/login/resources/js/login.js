@@ -44,4 +44,26 @@ window.onload = function () {
     },
     'retina_detect': true
   });
+
+  // Wrap every letter in a span
+  const textWrapper = document.querySelector('.realmTitle');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.realmTitle .letter',
+      scale: [4,1],
+      opacity: [0,1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 100*i
+    })
+    .add({
+    targets: '.realmTitle',
+    opacity: 0,
+    duration: 2000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 };
