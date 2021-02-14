@@ -111,7 +111,7 @@
                         </#if>
 
 
-                        <div id="kc-form-buttons" class="${properties.kcFormGroupClass!} mb-4">
+                        <div id="kc-form-buttons" class="mb-3">
                             <input type="hidden"
                                    id="id-hidden-input"
                                    name="credentialId"
