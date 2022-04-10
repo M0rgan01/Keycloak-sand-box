@@ -1,11 +1,13 @@
 name: tag ci develop
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
 
-  build-and-publish-develop:
-    if: github.ref == 'refs/heads/develop'
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       -
@@ -27,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/m0rgan01/keycloak-sand-box:develop
+          tags: ghcr.io/m0rgan01/keycloak-sand-box:main
 
       -
         name: Image digest
