@@ -7,21 +7,20 @@ This project allows editing of the keycloak theme for the Todo application
 ### Build and run containers
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
-And go to the Traefik keycloak routers mentioned host
 
 ### Stop containers
 
 ```bash
-docker-compose stop
+docker compose stop
 ```
 
 ### Override themes
 
 ```bash
-docker exec todo_keycloak rm -rf /opt/jboss/keycloak/themes/todo
-docker cp ./themes/todo todo_keycloak:/opt/jboss/keycloak/themes/todo
+docker exec todo_keycloak rm -rf /opt/keycloak/themes/todo
+docker cp ./themes/todo todo_keycloak:/opt/keycloak/themes/todo
 ```
 
 ### Disable front caching
@@ -32,5 +31,5 @@ at container startup (see docker-compose for more information)
 or
 
 ```bash
-docker cp ./imports/standalone.xml todo_keycloak:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+docker cp ./imports/standalone.xml todo_keycloak:/opt/keycloak/standalone/configuration/standalone.xml
 ```
