@@ -23,3 +23,4 @@ COPY themes/todo /opt/keycloak/themes/todo
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 
 CMD ["start", "--optimized"]
+
