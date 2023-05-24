@@ -45,9 +45,11 @@
         <div class="form-content p-4">
 
             <div class="text-center">
-                <span class="realmTitle">
+                <a tabindex="6"
+                   class="realmTitle"
+                   href="${client.baseUrl}">
                     ${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}
-                </span>
+                </a>
             </div>
 
             <hr style="width: 90%">
